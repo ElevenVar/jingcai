@@ -1,9 +1,47 @@
 {
-	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+	"pages": [
+		//pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		// navigationBarBackgroundColor:导航栏背景颜色
+		// navigationBarTextStyle：导航栏字体颜色
 		{
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "登录",
+				"navigationBarBackgroundColor": "#129aff",
+				"navigationBarTextStyle": "white"
+			}
+		},{
 			"path": "pages/index/index",
 			"style": {
 				"navigationBarTitleText": "uni-app"
+			}
+		},{
+			"path":"pages/home/home",
+			"style":{
+				"navigationBarTitleText": "首页",
+				"navigationBarBackgroundColor": "#129aff",
+				"navigationBarTextStyle": "white"
+			}
+		},{
+			"path":"pages/typeList/typeList",
+			"style":{
+				"navigationBarTitleText": "分类",
+				"navigationBarBackgroundColor": "#129aff",
+				"navigationBarTextStyle": "white"
+			}
+		},{
+			"path":"pages/shopCar/shopCar",
+			"style":{
+				"navigationBarTitleText": "购物车",
+				"navigationBarBackgroundColor": "#129aff",
+				"navigationBarTextStyle": "white"
+			}
+		},{
+			"path":"pages/main/main",
+			"style":{
+				"navigationBarTitleText": "我的",
+				"navigationBarBackgroundColor": "#129aff",
+				"navigationBarTextStyle": "white"
 			}
 		}
 	],
@@ -12,5 +50,36 @@
 		"navigationBarTitleText": "uni-app",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"color": "grey",
+		"selectedColor": "#2292DD",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [{
+				"pagePath": "pages/home/home",
+				"text": "首页",
+				"iconPath": "static/indexImg/sy.png", //图片路径
+				"selectedIconPath": "static/indexImg/sy1.png" //选中的图片路径
+			},
+			{
+				"pagePath": "pages/typeList/typeList",
+				"text": "分类",
+				"iconPath": "static/indexImg/gn.png",
+				"selectedIconPath": "static/indexImg/gn1.png"
+			},
+			{
+				"pagePath": "pages/shopCar/shopCar",
+				"text": "购物车",
+				"iconPath": "static/indexImg/zf.png",
+				"selectedIconPath": "static/indexImg/zf1.png"
+			},
+			{
+				"pagePath": "pages/main/main",
+				"text": "我的",
+				"iconPath": "static/indexImg/wd.png",
+				"selectedIconPath": "static/indexImg/wd1.png"
+			}
+		]
 	}
 }

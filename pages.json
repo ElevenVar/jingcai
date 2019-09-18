@@ -3,12 +3,14 @@
 		//pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		// navigationBarBackgroundColor:导航栏背景颜色
 		// navigationBarTextStyle：导航栏字体颜色
+		//navigationStyle :是否显示导航栏字体
 		{
 			"path": "pages/login/login",
 			"style": {
 				"navigationBarTitleText": "登录",
 				"navigationBarBackgroundColor": "#129aff",
-				"navigationBarTextStyle": "white"
+				"navigationBarTextStyle": "white",
+				"navigationStyle":"custom"
 			}
 		},{
 			"path": "pages/index/index",

@@ -1,1 +1,1 @@
-<view class="home"><view class="zh_header"><image class="maxImg _img" src="{{$root.m0}}" alt></image></view><view class="gridBox"><zh-grind vue-id="1" bind:__l="__l"></zh-grind></view></view>
+<view class="home"><view class="zh_header"><image class="maxImg _img" src="{{$root.m0}}" alt></image></view><view class="gridBox"><view class="zhGrid"><view class="zhGrid-Item"></view><view class="zhGrid-Item"></view><view class="zhGrid-Item"></view><view class="zhGrid-Item"></view></view></view></view>

@@ -9,8 +9,7 @@
 			"style": {
 				"navigationBarTitleText": "登录",
 				"navigationBarBackgroundColor": "#129aff",
-				"navigationBarTextStyle": "white",
-				"navigationStyle":"custom"
+				"navigationBarTextStyle": "white"
 			}
 		},{
 			"path": "pages/index/index",
@@ -22,7 +21,8 @@
 			"style":{
 				"navigationBarTitleText": "首页",
 				"navigationBarBackgroundColor": "#129aff",
-				"navigationBarTextStyle": "white"
+				"navigationBarTextStyle": "white",
+				"navigationStyle":"custom"
 			}
 		},{
 			"path":"pages/typeList/typeList",

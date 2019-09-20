@@ -208,5 +208,6 @@
 }
 .zhGrid .zhGrid-Item {
   width: 25%;
+  text-align: center;
 }
 

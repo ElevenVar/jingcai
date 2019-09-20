@@ -5,16 +5,38 @@
 .maxImg{
 	width:100%;height:100%;
 }
+.zh_col3{
+	width:33.33% !important;
+}
+.zh_col2{
+	width:50% !important;
+}
 //公用的头部
 .zh_header{
 	height:245px;
 }
+// 列表盒子
+.listBox{
+	padding:10px 0;background-color:@f2;
+}
 // 九宫格展示
 .zhGrid{
-	display: flex;
-	justify-content: flex-start;
-	flex-wrap: wrap;
+	display: flex;flex-wrap: wrap;
 	.zhGrid-Item{
-		width:25%;
+		width: 25%;text-align: center;padding:5px 0;
+		.zhGrid-Item-Img{
+			width:35px;height:35px;margin: 0 auto;
+		}
+	}
+}
+//列表展示
+.zhList{
+	display: flex;justify-content: space-between;padding:10px;
+	.zh_bgw;
+	.zhList-Img{
+		width:70px;height:50px;
+	}
+	.zhList-Content{
+		flex:1;overflow: hidden;display: flex;flex-direction: column;justify-content: space-between;
 	}
 }

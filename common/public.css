@@ -1,8 +1,14 @@
 .zh_fs12 {
   font-size: 12px;
 }
+.zh_fs14 {
+  font-size: 14px;
+}
 .zh_fs18 {
   font-size: 18px;
+}
+.zh_bgw {
+  background-color: #ffffff;
 }
 .zh_mg5 {
   margin: 5px;

@@ -1,4 +1,8 @@
 {
   "navigationBarTitleText": "首页",
-  "usingComponents": {}
+  "navigationBarBackgroundColor": "#129aff",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "zh-grind": "/components/zhGrid"
+  }
 }

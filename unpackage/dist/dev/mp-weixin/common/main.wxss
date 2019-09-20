@@ -14,4 +14,199 @@
 
 
 /*每个页面公共css */
+.zh_fs12 {
+  font-size: 12px;
+}
+.zh_fs18 {
+  font-size: 18px;
+}
+.zh_mg5 {
+  margin: 5px;
+}
+.zh_mg10 {
+  margin: 10px;
+}
+.zh_mg15 {
+  margin: 15px;
+}
+.zh_mg20 {
+  margin: 20px;
+}
+.zh_mgt5 {
+  margin-top: 5px;
+}
+.zh_mgt10 {
+  margin-top: 10px;
+}
+.zh_mgt15 {
+  margin-top: 15px;
+}
+.zh_mgt20 {
+  margin-top: 20px;
+}
+.zh_mgr5 {
+  margin-right: 5px;
+}
+.zh_mgr10 {
+  margin-right: 10px;
+}
+.zh_mgr15 {
+  margin-right: 15px;
+}
+.zh_mgr20 {
+  margin-right: 20px;
+}
+.zh_mgl5 {
+  margin-left: 5px;
+}
+.zh_mgl10 {
+  margin-left: 10px;
+}
+.zh_mgl15 {
+  margin-left: 15px;
+}
+.zh_mgl20 {
+  margin-left: 20px;
+}
+.zh_mgb5 {
+  margin-bottom: 5px;
+}
+.zh_mgb10 {
+  margin-bottom: 10px;
+}
+.zh_mgb15 {
+  margin-bottom: 15px;
+}
+.zh_mgb20 {
+  margin-bottom: 20px;
+}
+.zh_pd5 {
+  padding: 5px;
+}
+.zh_pd10 {
+  padding: 10px;
+}
+.zh_pd15 {
+  padding: 15px;
+}
+.zh_pd20 {
+  padding: 20px;
+}
+.zh_pdt5 {
+  padding-top: 5px;
+}
+.zh_pdt10 {
+  padding-top: 10px;
+}
+.zh_pdt15 {
+  padding-top: 15px;
+}
+.zh_pdt20 {
+  padding-top: 20px;
+}
+.zh_pdr5 {
+  padding-right: 5px;
+}
+.zh_pdr10 {
+  padding-right: 10px;
+}
+.zh_pdr15 {
+  padding-right: 15px;
+}
+.zh_pdr20 {
+  padding-right: 20px;
+}
+.zh_pdb5 {
+  padding-bottom: 5px;
+}
+.zh_pdb10 {
+  padding-bottom: 10px;
+}
+.zh_pdb15 {
+  padding-bottom: 15px;
+}
+.zh_pdb20 {
+  padding-bottom: 20px;
+}
+.zh_pdl5 {
+  padding-left: 5px;
+}
+.zh_pdl10 {
+  padding-left: 10px;
+}
+.zh_pdl15 {
+  padding-left: 15px;
+}
+.zh_pdl20 {
+  padding-left: 20px;
+}
+.zh_pr {
+  position: relative;
+}
+.zh_pa {
+  position: absolute;
+}
+.zh_pfi {
+  position: fixed;
+}
+.zh_pf {
+  position: flex;
+}
+.zh_db {
+  display: block;
+}
+.zh_di {
+  display: inline;
+}
+.zh_dn {
+  display: none;
+}
+.zh_dib {
+  display: inline-block;
+}
+/* 滚动条样式 */
+::-webkit-scrollbar {
+  /* y轴上的滚动条宽度 */
+  width: 3px;
+  /*x轴上滚动条高度 */
+  height: 0;
+}
+::-webkit-scrollbar-track {
+  background-color: #fdf8f5;
+  /*滚动条的背景颜色*/
+}
+::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  /*滚动条的背景颜色*/
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #2e569f;
+}
+::-webkit-scrollbar-thumb:active {
+  background-color: #2e569f;
+  cursor: pointer;
+}
+.maxImg {
+  width: 100%;
+  height: 100%;
+}
+.zh_header {
+  height: 245px;
+}
+.zhGrid {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+.zhGrid .zhGrid-Item {
+  width: 25%;
+}
 

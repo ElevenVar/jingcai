@@ -12,7 +12,7 @@
 			</view>
 			<input type="password" placeholder="请输入密码">
 		</view>
-		<view class='zh_login_Input blue' @click='subMit'>登录</view>
+		<view class='zh_login_Input blue' @tap='subMit'>登录</view>
 	</view>
 </template>
 
@@ -22,6 +22,15 @@
 			return {
 				
 			};
+		},
+		methods:{
+			//登录
+			subMit(){
+				console.log(0)
+				uni.switchTab({
+					url:"../home/home"
+				})
+			}
 		}
 	}
 </script>
@@ -41,7 +50,7 @@
 					}
 				}
 				input{
-					display: block;width:100%;border:none;background-color:#f2f2f2;height:100%;text-indent:15px;padding-left:30px;
+					display: block;width:100%;border:none;background-color:#f2f2f2;height:100%;text-indent:5px;padding-left:40px;
 				}
 		}
 	}

@@ -1,0 +1,39 @@
+.blue {
+  background-color: #2292DD !important;
+  color: #fff !important;
+  text-align: center;
+}
+.zh_login {
+  padding: 20px;
+  font-size: 14px;
+}
+.zh_login .zh_login_Input {
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  margin-bottom: 25px;
+  height: 40px;
+  overflow: hidden;
+  position: relative;
+  line-height: 40px;
+}
+.zh_login .zh_login_Input .zh_imgTitle {
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  left: 15px;
+  top: 5px;
+}
+.zh_login .zh_login_Input .zh_imgTitle ._img {
+  width: 100%;
+  height: 100%;
+}
+.zh_login .zh_login_Input input {
+  display: block;
+  width: 100%;
+  border: none;
+  background-color: #f2f2f2;
+  height: 100%;
+  text-indent: 5px;
+  padding-left: 40px;
+}
+

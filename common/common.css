@@ -189,13 +189,16 @@
 .zh_col2 {
   width: 50% !important;
 }
+/* 公用的头部 */
 .zh_header {
   height: 245px;
 }
+/* 列表盒子 */
 .listBox {
   padding: 10px 0;
   background-color: #f2f2f2;
 }
+/* 九宫格展示 */
 .zhGrid {
   display: flex;
   flex-wrap: wrap;
@@ -210,6 +213,7 @@
   height: 35px;
   margin: 0 auto;
 }
+/* 列表展示 */
 .zhList {
   display: flex;
   justify-content: space-between;

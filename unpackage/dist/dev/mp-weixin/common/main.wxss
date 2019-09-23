@@ -17,8 +17,14 @@
 .zh_fs12 {
   font-size: 12px;
 }
+.zh_fs14 {
+  font-size: 14px;
+}
 .zh_fs18 {
   font-size: 18px;
+}
+.zh_bgw {
+  background-color: #ffffff;
 }
 .zh_mg5 {
   margin: 5px;
@@ -190,18 +196,27 @@
   width: 100%;
   height: 100%;
 }
+.zh_col3 {
+  width: 33.33% !important;
+}
+.zh_col2 {
+  width: 50% !important;
+}
+/* 公用的头部 */
 .zh_header {
   height: 245px;
 }
+/* 列表盒子 */
+.listBox {
+  padding: 10px 0;
+  background-color: #f2f2f2;
+}
+/* 九宫格展示 */
 .zhGrid {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
@@ -209,5 +224,48 @@
 .zhGrid .zhGrid-Item {
   width: 25%;
   text-align: center;
+  padding: 5px 0;
+}
+.zhGrid .zhGrid-Item .zhGrid-Item-Img {
+  width: 35px;
+  height: 35px;
+  margin: 0 auto;
+}
+/* 列表展示 */
+.zhList {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px;
+  background-color: #ffffff;
+}
+.zhList .zhList-Img {
+  width: 70px;
+  height: 50px;
+}
+.zhList .zhList-Content {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 

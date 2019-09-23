@@ -1,6 +1,6 @@
-(global["webpackJsonp"] = global["webpackJsonp"] || []).push([["common/vendor"],{
-
-/***/ 1:
+(global["webpackJsonp"] = global["webpackJsonp"] || []).push([["common/vendor"],[
+/* 0 */,
+/* 1 */
 /*!************************************************************!*\
   !*** ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js ***!
   \************************************************************/
@@ -1496,126 +1496,7 @@ var uni$1 = uni;var _default =
 uni$1;exports.default = _default;
 
 /***/ }),
-
-/***/ 14:
-/*!********************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/runtime/componentNormalizer.js ***!
-  \********************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return normalizeComponent; });
-/* globals __VUE_SSR_CONTEXT__ */
-
-// IMPORTANT: Do NOT use ES2015 features in this file (except for modules).
-// This module is a runtime utility for cleaner component module output and will
-// be included in the final webpack user bundle.
-
-function normalizeComponent (
-  scriptExports,
-  render,
-  staticRenderFns,
-  functionalTemplate,
-  injectStyles,
-  scopeId,
-  moduleIdentifier, /* server only */
-  shadowMode /* vue-cli only */
-) {
-  // Vue.extend constructor export interop
-  var options = typeof scriptExports === 'function'
-    ? scriptExports.options
-    : scriptExports
-
-  // render functions
-  if (render) {
-    options.render = render
-    options.staticRenderFns = staticRenderFns
-    options._compiled = true
-  }
-
-  // functional template
-  if (functionalTemplate) {
-    options.functional = true
-  }
-
-  // scopedId
-  if (scopeId) {
-    options._scopeId = 'data-v-' + scopeId
-  }
-
-  var hook
-  if (moduleIdentifier) { // server build
-    hook = function (context) {
-      // 2.3 injection
-      context =
-        context || // cached call
-        (this.$vnode && this.$vnode.ssrContext) || // stateful
-        (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext) // functional
-      // 2.2 with runInNewContext: true
-      if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
-        context = __VUE_SSR_CONTEXT__
-      }
-      // inject component styles
-      if (injectStyles) {
-        injectStyles.call(this, context)
-      }
-      // register component module identifier for async chunk inferrence
-      if (context && context._registeredComponents) {
-        context._registeredComponents.add(moduleIdentifier)
-      }
-    }
-    // used by ssr in case component is cached and beforeCreate
-    // never gets called
-    options._ssrRegister = hook
-  } else if (injectStyles) {
-    hook = shadowMode
-      ? function () { injectStyles.call(this, this.$root.$options.shadowRoot) }
-      : injectStyles
-  }
-
-  if (hook) {
-    if (options.functional) {
-      // for template-only hot-reload because in that case the render fn doesn't
-      // go through the normalizer
-      options._injectStyles = hook
-      // register for functioal component in vue file
-      var originalRender = options.render
-      options.render = function renderWithStyleInjection (h, context) {
-        hook.call(context)
-        return originalRender(h, context)
-      }
-    } else {
-      // inject component registration as beforeCreate hook
-      var existing = options.beforeCreate
-      options.beforeCreate = existing
-        ? [].concat(existing, hook)
-        : [hook]
-    }
-  }
-
-  return {
-    exports: scriptExports,
-    options: options
-  }
-}
-
-
-/***/ }),
-
-/***/ 19:
-/*!*************************************************************!*\
-  !*** D:/project/zl-project/jingcai/static/loginImg/sjh.png ***!
-  \*************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjRCRDhDQTkyNTVENjExRTlBRkFCRjJENEQ3MTI4NTI1IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjRCRDhDQTkzNTVENjExRTlBRkFCRjJENEQ3MTI4NTI1Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NEJEOENBOTA1NUQ2MTFFOUFGQUJGMkQ0RDcxMjg1MjUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NEJEOENBOTE1NUQ2MTFFOUFGQUJGMkQ0RDcxMjg1MjUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5il8nNAAABS0lEQVR42mL8//8/w0AAJoYBAiy4JCwaPpj+Y2SI/s/IKPqPkZHhHxME/4Wy/zKh0TA1EPojUN/aV+mMe3GZz4gtqC3r34cCNa4CWszwnxFuGCkWQ/UxlL9JY+wiJaj7qBSidaTGsRSVLGYlNY6/ATEPEv8REM8H4t8EEmowEOsjif0k1WL0iPc5X817mZD3pKf+6QFSH4CYjVrZ6T2R6n4B8Xdq5mMeItVxEWvmgBUgoxaPWgwDL4hR9DSb5TOWMoAiiwOIUQQsQGyAFDdF1SIamG/Y+jkcWOv8xlM7MTEwMXpTXB9jAR6jqXogLD4BxNFAvJneFifeLOFcBq1/qWoxFwF9Geo936WBdD4BdWykpup3QCyKx8B8IixlwFeY4PJxLZXS0CSSmrfQdnUQsHnqDWymcpDRvP0D1Lcf2K5eQLLFo/mY2gAgwAAcwnzAy6jH8gAAAABJRU5ErkJggg=="
-
-/***/ }),
-
-/***/ 2:
+/* 2 */
 /*!******************************************************************************************!*\
   !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js ***!
   \******************************************************************************************/
@@ -7577,19 +7458,7 @@ internalMixin(Vue);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../webpack/buildin/global.js */ 3)))
 
 /***/ }),
-
-/***/ 20:
-/*!*************************************************************!*\
-  !*** D:/project/zl-project/jingcai/static/loginImg/yzm.png ***!
-  \*************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjRERTYxRkZGNTVENjExRTlBNkIzQjBFNjU3NTRCQjZCIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjRERTYyMDAwNTVENjExRTlBNkIzQjBFNjU3NTRCQjZCIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NERFNjFGRkQ1NUQ2MTFFOUE2QjNCMEU2NTc1NEJCNkIiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NERFNjFGRkU1NUQ2MTFFOUE2QjNCMEU2NTc1NEJCNkIiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5HT+moAAACSklEQVR42mL8//8/w0AAJnI1anR/N6K7xVpd37yB1HG13u815FrMSEpQ67V/MfzHyFjzj4kxCEgz/AM6G8g+DmQ33Stg30G2xZb17/mBlMB/RoZf/xkZOYEGgtgKQNoFiE2AlphCLARihMVQNuMtIH0CSO8C0reB+D1Q71cgzQY06/ObNIa3yBazoDkkDognkRl6alAch0VuChDn4otjZholYhZCies3jSz+SbXsNGD5GA94RG+L3wCxMxD7AfE/kiOdTLDpQR6bP4ghM/XPdWI8RA2LS4GFR4/CpF88wDz7iIGJUZCsZI4D/ABiDjSxv6BgvVPIsU1pwk8OoIX3gHxBaiau5UAsBsTZSGKfgdjsVjHnNij/KBCLUjtVfzlXw/f5QjXvNCDbBYhPA7H5jVLOcyBJlf4fIHEjSksUbA5JNWr5JA+MP49L1bx7QT6Fl5G9332BQZxJjgeJLbncgPgisHYSR6qPuYDUGiI9+J+QxW/xaNYF4vM6HV8VoPyJQMxGpMXvCFl8EppacQFJIL4MbAjE4KiFcIFLeC0+3igIKu6WEjCEB4gXk+DbJ0C8nZhUXU7lsjsF2Aj4QdBioK9fgFIylSxd+jqdcSfR+fhEg+AcINVGoaU7X2YwxZBcgJysF6gGUnlkWjr1RSaTB9kl1+k6/slAyhiIDxNp4XMgDn+WxZxDteatQevnVGALMhdYguliaWU+B9JzgHTbo1zWH1RvV4MAsAAJAlqSCbTEEmjxbSB7IZA9C1g1fqNZg36wt7mIAgABBgAKVsNROedceAAAAABJRU5ErkJggg=="
-
-/***/ }),
-
-/***/ 3:
+/* 3 */
 /*!***********************************!*\
   !*** (webpack)/buildin/global.js ***!
   \***********************************/
@@ -7619,8 +7488,7 @@ module.exports = g;
 
 
 /***/ }),
-
-/***/ 4:
+/* 4 */
 /*!************************************************!*\
   !*** D:/project/zl-project/jingcai/pages.json ***!
   \************************************************/
@@ -7631,8 +7499,7 @@ module.exports = g;
 
 
 /***/ }),
-
-/***/ 5:
+/* 5 */
 /*!*******************************************************!*\
   !*** ./node_modules/@dcloudio/uni-stat/dist/index.js ***!
   \*******************************************************/
@@ -8294,12 +8161,9 @@ Util = /*#__PURE__*/function () {
           // }
         },
         fail: function fail(e) {
-          // if (process.env.NODE_ENV === 'development') {
-          //   console.log('stat request fail', e);
-          // }
           if (++_this5._retry < 3) {
             setTimeout(function () {
-              _this5.request(data);
+              _this5._sendRequest(optionsData);
             }, 1000);
           }
         } });
@@ -8479,6 +8343,14 @@ var lifecycle = {
   },
   onLoad: function onLoad(options) {
     stat.load(options, this);
+    // 重写分享，获取分享上报事件
+    if (this.$scope && this.$scope.onShareAppMessage) {
+      var oldShareAppMessage = this.$scope.onShareAppMessage;
+      this.$scope.onShareAppMessage = function (options) {
+        stat.interceptShare(false);
+        return oldShareAppMessage.call(this, options);
+      };
+    }
   },
   onShow: function onShow() {
     isHide = false;
@@ -8497,47 +8369,30 @@ var lifecycle = {
   },
   onError: function onError(e) {
     stat.error(e);
-  },
-  onShareAppMessage: function onShareAppMessage() {
-    stat.interceptShare(false);
   } };
 
 
 function main() {
-  var Vue = __webpack_require__(/*! vue */ 2);
   if (true) {
     uni.report = function (type, options) {};
-  } else {}
+  } else { var Vue; }
 }
 
 main();
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
-
-/***/ 57:
-/*!****************************************************************!*\
-  !*** D:/project/zl-project/jingcai/static/homeImg/banner1.png ***!
-  \****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "static/img/banner1.0953bb46.png";
-
-/***/ }),
-
-/***/ 6:
+/* 6 */
 /*!******************************************************!*\
   !*** ./node_modules/@dcloudio/uni-stat/package.json ***!
   \******************************************************/
 /*! exports provided: _from, _id, _inBundle, _integrity, _location, _phantomChildren, _requested, _requiredBy, _resolved, _shasum, _spec, _where, author, bugs, bundleDependencies, deprecated, description, devDependencies, files, gitHead, homepage, license, main, name, repository, scripts, version, default */
 /***/ (function(module) {
 
-module.exports = {"_from":"@dcloudio/uni-stat@next","_id":"@dcloudio/uni-stat@2.0.0-23020190918001","_inBundle":false,"_integrity":"sha512-AaOozCo3kxnm2idouHUR/lfYjZlRtD9Ve29fIrkZJUZh7R9CfJJFKZDWJUW3rRbyUq2OiPisz5KargPCsIqsAg==","_location":"/@dcloudio/uni-stat","_phantomChildren":{},"_requested":{"type":"tag","registry":true,"raw":"@dcloudio/uni-stat@next","name":"@dcloudio/uni-stat","escapedName":"@dcloudio%2funi-stat","scope":"@dcloudio","rawSpec":"next","saveSpec":null,"fetchSpec":"next"},"_requiredBy":["#USER","/","/@dcloudio/vue-cli-plugin-uni"],"_resolved":"https://registry.npmjs.org/@dcloudio/uni-stat/-/uni-stat-2.0.0-23020190918001.tgz","_shasum":"4b2941c29eb674a60ea8eff04a9f13b2df28c0e1","_spec":"@dcloudio/uni-stat@next","_where":"/Users/fxy/Documents/DCloud/HbuilderX-plugins/release/uniapp-cli","author":"","bugs":{"url":"https://github.com/dcloudio/uni-app/issues"},"bundleDependencies":false,"deprecated":false,"description":"","devDependencies":{"@babel/core":"^7.5.5","@babel/preset-env":"^7.5.5","eslint":"^6.1.0","rollup":"^1.19.3","rollup-plugin-babel":"^4.3.3","rollup-plugin-clear":"^2.0.7","rollup-plugin-commonjs":"^10.0.2","rollup-plugin-copy":"^3.1.0","rollup-plugin-eslint":"^7.0.0","rollup-plugin-json":"^4.0.0","rollup-plugin-node-resolve":"^5.2.0","rollup-plugin-replace":"^2.2.0","rollup-plugin-uglify":"^6.0.2"},"files":["dist","package.json","LICENSE"],"gitHead":"0fac47b62d100213ce48c29dd9d0a335f8a00264","homepage":"https://github.com/dcloudio/uni-app#readme","license":"Apache-2.0","main":"dist/index.js","name":"@dcloudio/uni-stat","repository":{"type":"git","url":"git+https://github.com/dcloudio/uni-app.git","directory":"packages/uni-stat"},"scripts":{"build":"NODE_ENV=production rollup -c rollup.config.js","dev":"NODE_ENV=development rollup -w -c rollup.config.js"},"version":"2.0.0-23020190918001"};
+module.exports = {"_from":"@dcloudio/uni-stat@next","_id":"@dcloudio/uni-stat@2.0.0-23220190921001","_inBundle":false,"_integrity":"sha512-xlHjc5YqMrdr4rIKE/aMXlfzLDVxbCY31e/jH+n2NtFA14KDtNIHzsgNM0h0Mq8IUfDFtMMPmmlay59RTmHonQ==","_location":"/@dcloudio/uni-stat","_phantomChildren":{},"_requested":{"type":"tag","registry":true,"raw":"@dcloudio/uni-stat@next","name":"@dcloudio/uni-stat","escapedName":"@dcloudio%2funi-stat","scope":"@dcloudio","rawSpec":"next","saveSpec":null,"fetchSpec":"next"},"_requiredBy":["#USER","/","/@dcloudio/vue-cli-plugin-uni"],"_resolved":"https://registry.npmjs.org/@dcloudio/uni-stat/-/uni-stat-2.0.0-23220190921001.tgz","_shasum":"63200bbfbdcc4c696ed0be335fa14613757c4026","_spec":"@dcloudio/uni-stat@next","_where":"/Users/fxy/Documents/DCloud/HbuilderX-plugins/release/uniapp-cli","author":"","bugs":{"url":"https://github.com/dcloudio/uni-app/issues"},"bundleDependencies":false,"deprecated":false,"description":"","devDependencies":{"@babel/core":"^7.5.5","@babel/preset-env":"^7.5.5","eslint":"^6.1.0","rollup":"^1.19.3","rollup-plugin-babel":"^4.3.3","rollup-plugin-clear":"^2.0.7","rollup-plugin-commonjs":"^10.0.2","rollup-plugin-copy":"^3.1.0","rollup-plugin-eslint":"^7.0.0","rollup-plugin-json":"^4.0.0","rollup-plugin-node-resolve":"^5.2.0","rollup-plugin-replace":"^2.2.0","rollup-plugin-uglify":"^6.0.2"},"files":["dist","package.json","LICENSE"],"gitHead":"d26b206188ff9e5de659870e5f4e8b2d24d8f02f","homepage":"https://github.com/dcloudio/uni-app#readme","license":"Apache-2.0","main":"dist/index.js","name":"@dcloudio/uni-stat","repository":{"type":"git","url":"git+https://github.com/dcloudio/uni-app.git","directory":"packages/uni-stat"},"scripts":{"build":"NODE_ENV=production rollup -c rollup.config.js","dev":"NODE_ENV=development rollup -w -c rollup.config.js"},"version":"2.0.0-23220190921001"};
 
 /***/ }),
-
-/***/ 7:
+/* 7 */
 /*!*****************************************************************!*\
   !*** D:/project/zl-project/jingcai/pages.json?{"type":"style"} ***!
   \*****************************************************************/
@@ -8545,11 +8400,10 @@ module.exports = {"_from":"@dcloudio/uni-stat@next","_id":"@dcloudio/uni-stat@2.
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/login/login": { "navigationBarTitleText": "登录", "navigationBarBackgroundColor": "#129aff", "navigationBarTextStyle": "white", "navigationStyle": "custom" }, "pages/index/index": { "navigationBarTitleText": "uni-app" }, "pages/home/home": { "navigationBarTitleText": "首页", "navigationBarBackgroundColor": "#129aff", "navigationBarTextStyle": "white" }, "pages/typeList/typeList": { "navigationBarTitleText": "分类", "navigationBarBackgroundColor": "#129aff", "navigationBarTextStyle": "white" }, "pages/shopCar/shopCar": { "navigationBarTitleText": "购物车", "navigationBarBackgroundColor": "#129aff", "navigationBarTextStyle": "white" }, "pages/main/main": { "navigationBarTitleText": "我的", "navigationBarBackgroundColor": "#129aff", "navigationBarTextStyle": "white" } }, "globalStyle": { "navigationBarTextStyle": "black", "navigationBarTitleText": "uni-app", "navigationBarBackgroundColor": "#F8F8F8", "backgroundColor": "#F8F8F8" } };exports.default = _default;
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/login/login": { "navigationBarTitleText": "登录", "navigationBarBackgroundColor": "#129aff", "navigationBarTextStyle": "white" }, "pages/index/index": { "navigationBarTitleText": "uni-app" }, "pages/home/home": { "navigationBarTitleText": "首页", "navigationBarBackgroundColor": "#129aff", "navigationBarTextStyle": "white", "navigationStyle": "custom" }, "pages/typeList/typeList": { "navigationBarTitleText": "分类", "navigationBarBackgroundColor": "#129aff", "navigationBarTextStyle": "white" }, "pages/shopCar/shopCar": { "navigationBarTitleText": "购物车", "navigationBarBackgroundColor": "#129aff", "navigationBarTextStyle": "white" }, "pages/main/main": { "navigationBarTitleText": "我的", "navigationBarBackgroundColor": "#129aff", "navigationBarTextStyle": "white" } }, "globalStyle": { "navigationBarTextStyle": "black", "navigationBarTitleText": "uni-app", "navigationBarBackgroundColor": "#F8F8F8", "backgroundColor": "#F8F8F8" } };exports.default = _default;
 
 /***/ }),
-
-/***/ 8:
+/* 8 */
 /*!****************************************************************!*\
   !*** D:/project/zl-project/jingcai/pages.json?{"type":"stat"} ***!
   \****************************************************************/
@@ -8559,7 +8413,167 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "appid": "__UNI__D105A89" };exports.default = _default;
 
-/***/ })
+/***/ }),
+/* 9 */,
+/* 10 */,
+/* 11 */,
+/* 12 */,
+/* 13 */,
+/* 14 */
+/*!********************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/runtime/componentNormalizer.js ***!
+  \********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-}]);
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return normalizeComponent; });
+/* globals __VUE_SSR_CONTEXT__ */
+
+// IMPORTANT: Do NOT use ES2015 features in this file (except for modules).
+// This module is a runtime utility for cleaner component module output and will
+// be included in the final webpack user bundle.
+
+function normalizeComponent (
+  scriptExports,
+  render,
+  staticRenderFns,
+  functionalTemplate,
+  injectStyles,
+  scopeId,
+  moduleIdentifier, /* server only */
+  shadowMode /* vue-cli only */
+) {
+  // Vue.extend constructor export interop
+  var options = typeof scriptExports === 'function'
+    ? scriptExports.options
+    : scriptExports
+
+  // render functions
+  if (render) {
+    options.render = render
+    options.staticRenderFns = staticRenderFns
+    options._compiled = true
+  }
+
+  // functional template
+  if (functionalTemplate) {
+    options.functional = true
+  }
+
+  // scopedId
+  if (scopeId) {
+    options._scopeId = 'data-v-' + scopeId
+  }
+
+  var hook
+  if (moduleIdentifier) { // server build
+    hook = function (context) {
+      // 2.3 injection
+      context =
+        context || // cached call
+        (this.$vnode && this.$vnode.ssrContext) || // stateful
+        (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext) // functional
+      // 2.2 with runInNewContext: true
+      if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
+        context = __VUE_SSR_CONTEXT__
+      }
+      // inject component styles
+      if (injectStyles) {
+        injectStyles.call(this, context)
+      }
+      // register component module identifier for async chunk inferrence
+      if (context && context._registeredComponents) {
+        context._registeredComponents.add(moduleIdentifier)
+      }
+    }
+    // used by ssr in case component is cached and beforeCreate
+    // never gets called
+    options._ssrRegister = hook
+  } else if (injectStyles) {
+    hook = shadowMode
+      ? function () { injectStyles.call(this, this.$root.$options.shadowRoot) }
+      : injectStyles
+  }
+
+  if (hook) {
+    if (options.functional) {
+      // for template-only hot-reload because in that case the render fn doesn't
+      // go through the normalizer
+      options._injectStyles = hook
+      // register for functioal component in vue file
+      var originalRender = options.render
+      options.render = function renderWithStyleInjection (h, context) {
+        hook.call(context)
+        return originalRender(h, context)
+      }
+    } else {
+      // inject component registration as beforeCreate hook
+      var existing = options.beforeCreate
+      options.beforeCreate = existing
+        ? [].concat(existing, hook)
+        : [hook]
+    }
+  }
+
+  return {
+    exports: scriptExports,
+    options: options
+  }
+}
+
+
+/***/ }),
+/* 15 */,
+/* 16 */,
+/* 17 */,
+/* 18 */,
+/* 19 */
+/*!*************************************************************!*\
+  !*** D:/project/zl-project/jingcai/static/loginImg/sjh.png ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjRCRDhDQTkyNTVENjExRTlBRkFCRjJENEQ3MTI4NTI1IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjRCRDhDQTkzNTVENjExRTlBRkFCRjJENEQ3MTI4NTI1Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NEJEOENBOTA1NUQ2MTFFOUFGQUJGMkQ0RDcxMjg1MjUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NEJEOENBOTE1NUQ2MTFFOUFGQUJGMkQ0RDcxMjg1MjUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5il8nNAAABS0lEQVR42mL8//8/w0AAJoYBAiy4JCwaPpj+Y2SI/s/IKPqPkZHhHxME/4Wy/zKh0TA1EPojUN/aV+mMe3GZz4gtqC3r34cCNa4CWszwnxFuGCkWQ/UxlL9JY+wiJaj7qBSidaTGsRSVLGYlNY6/ATEPEv8REM8H4t8EEmowEOsjif0k1WL0iPc5X817mZD3pKf+6QFSH4CYjVrZ6T2R6n4B8Xdq5mMeItVxEWvmgBUgoxaPWgwDL4hR9DSb5TOWMoAiiwOIUQQsQGyAFDdF1SIamG/Y+jkcWOv8xlM7MTEwMXpTXB9jAR6jqXogLD4BxNFAvJneFifeLOFcBq1/qWoxFwF9Geo936WBdD4BdWykpup3QCyKx8B8IixlwFeY4PJxLZXS0CSSmrfQdnUQsHnqDWymcpDRvP0D1Lcf2K5eQLLFo/mY2gAgwAAcwnzAy6jH8gAAAABJRU5ErkJggg=="
+
+/***/ }),
+/* 20 */
+/*!*************************************************************!*\
+  !*** D:/project/zl-project/jingcai/static/loginImg/yzm.png ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjRERTYxRkZGNTVENjExRTlBNkIzQjBFNjU3NTRCQjZCIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjRERTYyMDAwNTVENjExRTlBNkIzQjBFNjU3NTRCQjZCIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NERFNjFGRkQ1NUQ2MTFFOUE2QjNCMEU2NTc1NEJCNkIiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NERFNjFGRkU1NUQ2MTFFOUE2QjNCMEU2NTc1NEJCNkIiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5HT+moAAACSklEQVR42mL8//8/w0AAJnI1anR/N6K7xVpd37yB1HG13u815FrMSEpQ67V/MfzHyFjzj4kxCEgz/AM6G8g+DmQ33Stg30G2xZb17/mBlMB/RoZf/xkZOYEGgtgKQNoFiE2AlphCLARihMVQNuMtIH0CSO8C0reB+D1Q71cgzQY06/ObNIa3yBazoDkkDognkRl6alAch0VuChDn4otjZholYhZCies3jSz+SbXsNGD5GA94RG+L3wCxMxD7AfE/kiOdTLDpQR6bP4ghM/XPdWI8RA2LS4GFR4/CpF88wDz7iIGJUZCsZI4D/ABiDjSxv6BgvVPIsU1pwk8OoIX3gHxBaiau5UAsBsTZSGKfgdjsVjHnNij/KBCLUjtVfzlXw/f5QjXvNCDbBYhPA7H5jVLOcyBJlf4fIHEjSksUbA5JNWr5JA+MP49L1bx7QT6Fl5G9332BQZxJjgeJLbncgPgisHYSR6qPuYDUGiI9+J+QxW/xaNYF4vM6HV8VoPyJQMxGpMXvCFl8EppacQFJIL4MbAjE4KiFcIFLeC0+3igIKu6WEjCEB4gXk+DbJ0C8nZhUXU7lsjsF2Aj4QdBioK9fgFIylSxd+jqdcSfR+fhEg+AcINVGoaU7X2YwxZBcgJysF6gGUnlkWjr1RSaTB9kl1+k6/slAyhiIDxNp4XMgDn+WxZxDteatQevnVGALMhdYguliaWU+B9JzgHTbo1zWH1RvV4MAsAAJAlqSCbTEEmjxbSB7IZA9C1g1fqNZg36wt7mIAgABBgAKVsNROedceAAAAABJRU5ErkJggg=="
+
+/***/ }),
+/* 21 */,
+/* 22 */,
+/* 23 */,
+/* 24 */,
+/* 25 */,
+/* 26 */,
+/* 27 */,
+/* 28 */,
+/* 29 */,
+/* 30 */,
+/* 31 */,
+/* 32 */,
+/* 33 */,
+/* 34 */,
+/* 35 */,
+/* 36 */,
+/* 37 */
+/*!****************************************************************!*\
+  !*** D:/project/zl-project/jingcai/static/homeImg/banner1.png ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/img/banner1.0953bb46.png";
+
+/***/ })
+]]);
 //# sourceMappingURL=../../.sourcemap/mp-weixin/common/vendor.js.map

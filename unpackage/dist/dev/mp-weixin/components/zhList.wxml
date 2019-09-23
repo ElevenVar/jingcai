@@ -1,0 +1,1 @@
+<view><view class="zhList"><view class="zhList-Img zh_mgr15"><image class="maxImg _img" src="{{$root.m0}}" alt></image></view><view class="zhList-Content"><text class="zh_fs14">这是标题栏</text><text class="zh_fs12">这是具体内容</text></view></view></view>

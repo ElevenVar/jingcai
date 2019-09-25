@@ -26,19 +26,19 @@
 		data() {
 			return {
 				GridItem: [{
-						url: '../../static/homeImg/hfcz.png',
+						url: '../static/homeImg/hfcz.png',
 						text: '学杂费'
 					},
 					{
-						url: '../../static/homeImg/hfcz.png',
+						url: '../static/homeImg/hfcz.png',
 						text: '成绩查询'
 					},
 					{
-						url: '../../static/homeImg/hfcz.png',
+						url: '../static/homeImg/hfcz.png',
 						text: '课程'
 					},
 					{
-						url: '../../static/homeImg/hfcz.png',
+						url: '../static/homeImg/hfcz.png',
 						text: '消息'
 					},
 				],

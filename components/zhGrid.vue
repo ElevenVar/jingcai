@@ -7,7 +7,7 @@
 			@click='zhGrid(item,index)'
 		>
 			<view class='zhGrid-Item-Img'>
-				<image class='maxImg' :src="item.url" mode=""></image>
+				<image class='maxImg' :src="item.url" mode="图片路径不对"></image>
 			</view>
 			<text class='zh_fs14'>{{item.text}}</text>
 		</view>
